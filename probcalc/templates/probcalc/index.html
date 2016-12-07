@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>Probability Calculator</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+    <div class="text-center">
+        <h1>Many Sided Dice and Probability</h1>
+        <p>Welcome! On this page we are going to explore probability through an example.
+        Suppose that we have a dice with many dies, n sides to be precise, with each side having a number 1,...,n on it and no two sides
+        having the same number. Suppose that we want to know the probability that if we throw the dice
+         n times, we have each side show up exactly one time.</p>
+         <form action="" method="get">
+             <input type="text" name="prob" value="{{currentEntry}}"></input>
+             <button type="submit">Calculate Probability</button>
+         </form>
+
+        {{probability}}
+    </div>
+</body>
+</html>
