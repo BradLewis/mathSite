@@ -10,7 +10,7 @@ class testMethods(TestCase):
         self.assertTrue(output == expectedOutput)
 
     def testNegative(self):
-        output = getNumber(-0.8)
+        output = getNumber("-0.8")
         expectedOutput = "Whoops! That is not a valid number, please enter a valid number (remember a dice can only have an integer number of sides)"
         self.assertTrue(output == expectedOutput)
 
@@ -21,10 +21,10 @@ class testMethods(TestCase):
 
     def testlarge(self):
         output = getNumber("999")
-        expectedOutput = "The probability of rolling a 890 sided dice 890 times and each side comes up only once is approximately 0"
+        expectedOutput = "The probability of rolling a 999 sided dice 999 times and each side comes up only once is approximately 0"
         self.assertTrue(output == expectedOutput)
 
     def testNegativeLarge(self):
         output = getNumber(-1008)
-        expectedOutput = "Whoops! That is not a valid number, please enter a valid number (remember a dice can only have an integer number of sides)"
+        expectedOutput = "You cannot have a -1008 sided dice! Please enter a valid number"
         self.assertTrue(output == expectedOutput)

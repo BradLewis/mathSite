@@ -2,6 +2,7 @@ from django.shortcuts import render
 from decimal import Decimal
 
 def index(request):
+	print(getNumber("0.8"))
 	prevEntry = ""
 	try:
 		#Gets the probability from the textbox
@@ -24,6 +25,7 @@ def index(request):
 #p(n) = (n-1)!/n^(n-1)
 def calcProbability(n, nMax):
 	#If n is greater than around 900, the function returns 0 anyways so this saves the program crashing for large numbers and recursion
+	#errors (python defaults to 1000 max, which works nicely for this solution)
 	if n > 900:
 		return 0
 	#If n is 1 or 0 then do nothing (that is return 1)
